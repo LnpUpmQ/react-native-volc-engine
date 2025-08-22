@@ -118,7 +118,7 @@ dependencies {
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-  implementation "com.github.LnpUpmQ:byte-beauty-effect-lib:4.6.2"
+  implementation "com.github.LnpUpmQ:byte-beauty-effect-lib:4.7.2"
   implementation "androidx.localbroadcastmanager:localbroadcastmanager:1.1.0"
   implementation "im.zego:express-video:$zego_express_version"
 }

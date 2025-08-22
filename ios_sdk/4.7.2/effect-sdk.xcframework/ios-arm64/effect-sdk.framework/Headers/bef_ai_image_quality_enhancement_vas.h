@@ -1,0 +1,25 @@
+#ifndef     BEF_AI_IMAGE_QUALITY_ENHANCEMENT_VAS_H
+#define     BEF_AI_IMAGE_QUALITY_ENHANCEMENT_VAS_H
+
+#include "bef_ai_image_quality_enhancement_public_define.h"
+
+
+BEF_SDK_API bef_effect_result_t
+bef_ai_image_quality_enhancement_vas_create(bef_image_quality_enhancement_handle *handle, const bef_ai_vas_config *param);
+
+BEF_SDK_API bef_effect_result_t
+bef_ai_image_quality_enhancement_vas_process(bef_image_quality_enhancement_handle handle, const unsigned char* inputBuffer, bef_ai_vas_process_params* inputParam, bef_ai_vas_output* algoOutput, const unsigned char* outputBuffer);
+
+BEF_SDK_API bef_effect_result_t
+bef_ai_image_quality_enhancement_vas_set_strength(bef_image_quality_enhancement_handle handle, const bef_ai_vas_level *level);
+
+BEF_SDK_API bef_effect_result_t
+bef_ai_image_quality_enhancement_vas_check_license(bef_image_quality_enhancement_handle handle, const char* licensePath);
+
+BEF_SDK_API bef_effect_result_t
+bef_ai_image_quality_enhancement_vas_check_online_license(bef_image_quality_enhancement_handle handle, const char* licensePath);
+
+BEF_SDK_API bef_effect_result_t
+bef_ai_image_quality_enhancement_vas_destroy(bef_image_quality_enhancement_handle handle);
+
+#endif

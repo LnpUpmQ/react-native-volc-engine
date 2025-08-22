@@ -1,0 +1,4 @@
+*.pbxproj -text
+# specific for windows script files
+*.bat text eol=crlf
+ios_sdk/libeffect-sdk.a filter=lfs diff=lfs merge=lfs -text

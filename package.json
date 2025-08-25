@@ -1,6 +1,6 @@
 {
   "name": "react-native-volc-engine",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "volc",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",

@@ -2,6 +2,5 @@
 # specific for windows script files
 *.bat text eol=crlf
 #ios_sdk/libeffect-sdk.a filter=lfs diff=lfs merge=lfs -text
-ios_sdk/4.7.2/effect-sdk.xcframework/ios-arm64/dSYM.zip filter=lfs diff=lfs merge=lfs -text
-ios_sdk/4.7.2/effect-sdk.xcframework/ios-x86_64_arm64_static/libeffect-sdk.a filter=lfs diff=lfs merge=lfs -text
+ios_sdk/4.7.2/dynamic/effect-sdk.xcframework/ios-arm64/dSYM.zip filter=lfs diff=lfs merge=lfs -text
 ios_sdk/4.7.2/static/effect-sdk.xcframework/ios-arm64/effect-sdk.a filter=lfs diff=lfs merge=lfs -text

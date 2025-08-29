@@ -16,7 +16,14 @@ Pod::Spec.new do |s|
 
   s.source_files = "ios/**/*.{h,m,mm,cpp}"
 
-  s.vendored_frameworks = './ios_sdk/4.7.2/effect-sdk.xcframework'
+  linkage = ENV['USE_FRAMEWORKS']
+  if linkage == 'static'
+    s.vendored_frameworks = ['ios_sdk/4.7.2/static/effect-sdk.xcframework']
+  elsif linkage == 'dynamic'
+    s.vendored_frameworks = ['ios_sdk/4.7.2/dynamic/effect-sdk.xcframework']
+  else
+    # 请手动集成sdk
+  end
 
   s.dependency 'ZegoExpressEngine'
 

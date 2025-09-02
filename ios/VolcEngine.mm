@@ -3,7 +3,7 @@
 #import "DataHelper.h"
 #import "BEGLTexture.h"
 #import "ZGCaptureDeviceCamera.h"
-#import <EffectsARSDK/bef_effect_ai_api.h>
+#import <effect-sdk/bef_effect_ai_api.h>
 #import <ZegoExpressEngine/ZegoExpressEngine.h>
 #import <CoreVideo/CoreVideo.h>
 

@@ -110,6 +110,7 @@ repositories {
 }
 
 def kotlin_version = getExtOrDefault("kotlinVersion")
+def zego_express_alias = getExtOrDefault("zegoExpressAlias")
 def zego_express_version = getExtOrDefault("zegoExpressVersion")
 
 dependencies {
@@ -120,7 +121,7 @@ dependencies {
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
   implementation "com.github.LnpUpmQ:byte-beauty-effect-lib:4.7.2"
   implementation "androidx.localbroadcastmanager:localbroadcastmanager:1.1.0"
-  implementation "im.zego:express-video:$zego_express_version"
+  implementation "im.zego:express-$zego_express_alias:$zego_express_version"
 }
 
 if (isNewArchitectureEnabled()) {

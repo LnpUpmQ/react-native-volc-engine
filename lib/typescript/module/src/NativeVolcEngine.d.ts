@@ -8,6 +8,7 @@ export interface Spec extends TurboModule {
     updateComposerNodeIntensity(node: string, key: string, intensity: number): Promise<number>;
     setFilter(path: string): Promise<number>;
     updateFilterIntensity(intensity: number): Promise<number>;
+    setSticker(path: string): Promise<number>;
 }
 declare const _default: Spec;
 export default _default;

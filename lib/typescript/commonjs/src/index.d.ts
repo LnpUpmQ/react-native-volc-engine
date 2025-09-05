@@ -6,6 +6,7 @@ export declare function setComposeNodes(nodes: string[]): Promise<any>;
 export declare function updateComposerNodeIntensity(node: string, key: string, intensity: number): Promise<void>;
 export declare function setFilter(path: string): Promise<void>;
 export declare function updateFilterIntensity(intensity: number): Promise<void>;
+export declare function setSticker(path: string): Promise<void>;
 declare const _default: {
     init: typeof init;
     enableCustomVideoCapture: typeof enableCustomVideoCapture;
@@ -15,6 +16,7 @@ declare const _default: {
     updateComposerNodeIntensity: typeof updateComposerNodeIntensity;
     setFilter: typeof setFilter;
     updateFilterIntensity: typeof updateFilterIntensity;
+    setSticker: typeof setSticker;
 };
 export default _default;
 //# sourceMappingURL=index.d.ts.map

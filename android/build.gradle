@@ -105,26 +105,13 @@ android {
 repositories {
   mavenCentral()
   google()
-  // 火山引擎智能美化特效 SDK 官方 Maven 仓（公开仓）
-  maven { url 'https://maven.byted.org/repository/android_public/' }
-  // 公开仓缺失该 artifact 时的认证仓，凭据向火山引擎技术支持申请
-  maven {
-    url 'https://artifact.bytedance.com/repository/thrall_ck/'
-    credentials {
-      username rootProject.findProperty('VOLC_MAVEN_USERNAME') ?: ''
-      password rootProject.findProperty('VOLC_MAVEN_PASSWORD') ?: ''
-    }
-    authentication {
-      digest(BasicAuthentication)
-    }
-  }
+  maven { url 'https://www.jitpack.io' }
   maven { url 'https://storage.zego.im/maven' }
 }
 
 def kotlin_version = getExtOrDefault("kotlinVersion")
 def zego_express_alias = getExtOrDefault("zegoExpressAlias")
 def zego_express_version = getExtOrDefault("zegoExpressVersion")
-def effect_sdk_version = getExtOrDefault("effectSdkVersion")
 
 dependencies {
   // For < 0.71, this will be from the local maven repo
@@ -132,7 +119,7 @@ dependencies {
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-  implementation "com.bytedance:effectsdk:$effect_sdk_version"
+  implementation "com.github.LnpUpmQ:byte-beauty-effect-lib:4.7.2"
   implementation "androidx.localbroadcastmanager:localbroadcastmanager:1.1.0"
   implementation "im.zego:express-$zego_express_alias:$zego_express_version"
 }

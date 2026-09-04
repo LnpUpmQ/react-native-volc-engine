@@ -110,6 +110,14 @@ repositories {
   maven { url 'https://storage.zego.im/maven' }
 }
 
+// 宿主 App 解析传递依赖时只查 App 工程自己的仓库列表，需把 mavenrepo 注入 allprojects（与 zego-zim 模块同模式）
+def effectSdkMavenRepo = "${projectDir}/mavenrepo"
+rootProject.allprojects {
+  repositories {
+    maven { url effectSdkMavenRepo }
+  }
+}
+
 def kotlin_version = getExtOrDefault("kotlinVersion")
 def zego_express_alias = getExtOrDefault("zegoExpressAlias")
 def zego_express_version = getExtOrDefault("zegoExpressVersion")

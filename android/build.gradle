@@ -105,13 +105,15 @@ android {
 repositories {
   mavenCentral()
   google()
-  maven { url 'https://www.jitpack.io' }
+  // 火山引擎智能美化特效 SDK 官方 aar（4.7.2），来源为厂商控制台离线包，随本仓库分发
+  maven { url "$projectDir/mavenrepo" }
   maven { url 'https://storage.zego.im/maven' }
 }
 
 def kotlin_version = getExtOrDefault("kotlinVersion")
 def zego_express_alias = getExtOrDefault("zegoExpressAlias")
 def zego_express_version = getExtOrDefault("zegoExpressVersion")
+def effect_sdk_version = getExtOrDefault("effectSdkVersion")
 
 dependencies {
   // For < 0.71, this will be from the local maven repo
@@ -119,7 +121,7 @@ dependencies {
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-  implementation "com.github.LnpUpmQ:byte-beauty-effect-lib:4.7.2"
+  implementation "com.bytedance:effectsdk:$effect_sdk_version"
   implementation "androidx.localbroadcastmanager:localbroadcastmanager:1.1.0"
   implementation "im.zego:express-$zego_express_alias:$zego_express_version"
 }
